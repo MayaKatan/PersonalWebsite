@@ -6,29 +6,26 @@
   <link rel="stylesheet" href="index.css">
 </head>
 <body>
-
   <div class="container">
-    <!-- Profile Image and About Me -->
+<!-- About Me -->
+    <h2>About Me</h2>
     <section class="intro">
-      <img src="https://media.licdn.com/dms/image/v2/D4D03AQHZ1nBOuf5-QA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728141779403?e=1755734400&v=beta&t=s5uODS31IcZi70-qTA7BftpwQPosV3tS3GMjET7Gv6g"
-           alt="My Photo"
-           class="profile-pic">
-      <div>
-        <h2>About Me</h2>
+      <img
+        src="https://media.licdn.com/dms/image/v2/D4D03AQHZ1nBOuf5-QA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1728141779403?e=1755734400&v=beta&t=s5uODS31IcZi70-qTA7BftpwQPosV3tS3GMjET7Gv6g"
+        alt="My Photo"
+        class="profile-pic"
+      >
+      <div class="intro-text">
+
         <p>
-          I am a Computer Science student with practical experience in academic and military projects,
-          primarily in software development and programming.
-          Proficient in Python, Java, SQL, and C, I bring quick learning abilities, teamwork skills, and a focus on writing clean, efficient code.
-          During my service in Unit 8200, I gained hands-on experience with advanced technologies and managing high-pressure challenges.
-          I am committed to developing reliable, high-quality software that meets real-world needs.
-          This website showcases my projects, highlights my professional approach,
-          and demonstrates how I can contribute to your team or next project.
+          Computer Science student with hands-on experience in software development through academic work and military service in Unit 8200.
+           Skilled in Python, Java, C, and SQL, with a strong focus on writing clean, efficient code.
         </p>
       </div>
     </section>
-
-    <!-- Skills -->
-    <section>
+    
+<!-- My Skills -->   
+        <section>
       <h2>My Skills</h2>
       <div class="skills-container">
         <span class="skill">Python</span>
@@ -58,54 +55,67 @@
       </div>
     </section>
 
-    <section class="card-section education">
-      <h2>Education</h2>
-      <div class="education-details">
-        <p>B.Sc. in Computer Science (Student) | Open University of Israel</p>
-        <p><strong>Average Grade:</strong> 80</p>
-      </div>
-      <ul class="relevant-courses">
-        <li>Introduction to Computer Science</li>
-        <li>Data Structures and Algorithms</li>
-        <li>Data Analysis and Programming in Python</li>
-      </ul>
-    </section>
-
+<!-- Explore -->
     <h2>Explore More</h2>
-    <section class="boxes">
-      <a href="page2.html" class="box projects">
-        <h3>My Projects</h3>
-      </a>
-      <a href="page3.html" class="box community">
-        <h3>Community & Volunteer Experience</h3>
-      </a>
-      <a href="page4.html" class="box work">
-        <h3>Work Experience</h3>
-      </a>
+    <section class="explore-container">
+    <a href="page2.html" class="explore-box">
+        <h3><strong>My Projects</strong></h3>
+    </a>
+    <a href="page3.html" class="explore-box">
+        <h3><strong>Community & Volunteer Experience </strong></h3>
+    </a>
+    <a href="page4.html" class="explore-box">
+        <h3><strong>Work Experience</strong></h3>
+    </a>
+    <a href="page5.html" class="explore-box">
+        <h3><strong>Honors & Awards</strong></h3>
+    </a>
     </section>
 
-    <section class="card-section honors">
-      <h2>Honors & Awards</h2>
-      <div class="award">
-        <h3>BeSafe Hackathon – 2nd Place | QueenB × AppsFlyer</h3>
-        <div class="date">Jan 2025</div>
-        <p>Awarded 2nd place for developing a comprehensive web platform aimed at enhancing online safety for teenagers. (Advanced Track)</p>
-      </div>
-      <div class="award">
-        <h3>Excellence Award</h3>
-        <div class="date">May 2019</div>
-        <p>Received Certificate of Excellence on the 71th Independence Day of the State of Israel from the commander of Unit 8200 for exceptional service during military tenure.</p>
-      </div>
+<!-- Education -->
+    <section class="card-section education">
+    <h2>Education</h2>
+    <div class="education-details">
+        <p><strong>B.Sc. in Computer Science (Student) | Open University of Israel</strong></p>
+        <p><strong>Average Grade:</strong> 80</p>
+    </div>
+
+    <div class="courses-container">
+        <h3 class="courses-title">Relevant academic courses:</h3>
+        <div class="course-tags">
+        <span class="course-tag">Introduction to Computer Science</span>
+        <span class="course-tag">Data Structures and Algorithms</span>
+        <span class="course-tag">Data Analysis and Programming in Python</span>
+        <a href="https://raw.githubusercontent.com/MayaKatan/PersonalWebsite/main/documents/AcademicTranscript.pdf" download class="courses-btn">Academic Transcript</a>
+        </div>
+    </div>
     </section>
 
+<!-- Contact -->
     <section>
       <h2>Get in Touch</h2>
       <ul class="contact">
         <li><a href="https://www.linkedin.com/in/maya-katan/" target="_blank">LinkedIn</a></li>
         <li><a href="https://github.com/MayaKatan" target="_blank">GitHub</a></li>
+          <li>
+            <a href="#" onclick="copyEmail(event)">Email</a>
+          </li>
+
+          <script>
+            function copyEmail(event) {
+              event.preventDefault();
+              const email = "mayakat3@gmail.com";
+              navigator.clipboard.writeText(email).then(() => {
+                alert("Email copied to clipboard!");
+              }).catch(err => {
+                alert("Failed to copy email.");
+              });
+            }
+          </script>
       </ul>
     </section>
   </div>
 
 </body>
 </html>
+
