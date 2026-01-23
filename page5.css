@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #FAFAF6;
+  background-color: #F4F0E7; /* קרם */
   color: #2D2D2A;
   padding: 40px 20px;
   min-height: 100vh;
@@ -22,12 +22,17 @@ body {
   text-decoration: none;
   font-weight: 600;
   padding: 12px 12px;
-  background: #FAFAF6;
-  color: #D9A5B3;
-  border: 2px solid #F1B4AA;
+  background: #E9E2D0; /* בז' */
+  color: #4C0000; /* בורדו */
+  border: 2px solid #A5A889; /* ירוק מרווה */
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 1000;
+}
+
+.back-button:hover {
+  background: #A5A889; /* ירוק בהובר */
+  color: #F4F0E7;
 }
 
 /* Container holding all experiences */
@@ -38,35 +43,36 @@ body {
 
 /* Main title */
 h1 {
-  border-bottom: 2px solid #D9A5B3;
+  border-bottom: 2px solid #A5A889; /* קו ירוק מרווה */
   padding-bottom: 3px;
   margin-top: 20px;
   margin-bottom: 20px;
-  color: #2D2D2A;
+  color: #4C0000; /* בורדו כהה */
   font-size: 25px;
   text-align: left;
 }
 
 /* Experience box */
 .experience-item {
-  background: white;
-  border: 2px solid #F1B4AA;
+  background: #E9E2D0; /* רקע בז' לכרטיס */
+  border: 1px solid #A5A889; /* גבול ירוק */
   border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(217, 165, 179, 0.2);
   padding: 25px;
   margin-bottom: 10px;
-  transition: transform 0.2s ease;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .experience-item:hover {
   transform: translateY(-3px);
+  border-color: #4C0000; /* בורדו בהובר */
+  box-shadow: 0 6px 16px rgba(76, 0, 0, 0.1);
 }
 
 /* Header inside each experience box (logo + content) */
 .experience-header {
   display: flex;
   flex-direction: row-reverse;
-  align-items: flex-start; /* מונע יישור לאמצע שמרחיק את הטקסט */
+  align-items: flex-start;
   gap: 20px;
   margin-bottom: 1px;
 }
@@ -77,6 +83,8 @@ h1 {
   height: 100px;
   object-fit: contain;
   flex-shrink: 0;
+  /* אופציונלי: אם הלוגו נבלע ברקע הבז' */
+  /* background: white; border-radius: 8px; padding: 5px; */
 }
 
 /* Experience content */
@@ -89,21 +97,21 @@ h1 {
   font-weight: 700;
   font-size: 1.1rem;
   margin-bottom: 3px;
-  color: #D98A9B;
+  color: #4C0000; /* בורדו */
 }
 
 /* Company name */
 .company {
   font-size: 1rem;
   font-weight: 600;
-  color: #555;
+  color: #2D2D2A; /* אפור כהה */
   margin-bottom: 4px;
 }
 
 /* Location & date */
 .location-date {
   font-size: 0.9rem;
-  color: #888;
+  color: #646138; /* ירוק זית */
   font-style: italic;
   margin-bottom: 1px;
 }
@@ -113,7 +121,7 @@ ul.responsibilities {
   padding-left: 20px;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #333;
+  color: #2D2D2A;
 }
 
 ul.responsibilities li {
@@ -131,6 +139,9 @@ ul.responsibilities li {
 /* Optional: tag for temporary positions */
 .temporary-tag {
   font-size: 0.85rem;
-  color: #999;
+  color: #646138;
   margin-left: 5px;
+  border: 1px solid #646138;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
