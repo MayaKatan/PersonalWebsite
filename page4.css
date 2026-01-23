@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #FAFAF6; /* רקע בהיר */
+  background-color: #F4F0E7; /* רקע קרם */
   color: #2D2D2A;
   padding: 40px 20px;
   min-height: 100vh;
@@ -21,13 +21,18 @@ body {
   left: 20px;
   text-decoration: none;
   font-weight: 600;
-  padding: 12px 12px;
-  background: #FAFAF6;
-  color: #D9A5B3;
-  border: 2px solid #F1B4AA;
+  padding: 10px 16px; /* ריווח נוח יותר */
+  background: #E9E2D0; /* בז' */
+  color: #4C0000; /* בורדו */
+  border: 2px solid #A5A889; /* ירוק מרווה */
   border-radius: 8px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   z-index: 1000;
+}
+
+.back-button:hover {
+  background: #A5A889;
+  color: #F4F0E7;
 }
 
 /* Container holding all experiences */
@@ -38,28 +43,29 @@ body {
 
 /* Main title */
 h1 {
-  border-bottom: 2px solid #D9A5B3;
+  border-bottom: 2px solid #A5A889; /* קו ירוק מרווה */
   padding-bottom: 3px;
   margin-top: 20px;
-  margin-bottom: 20px; /* ריווח גדול יותר מתחת לכותרת */
-  color: #2D2D2A;
+  margin-bottom: 30px; 
+  color: #4C0000; /* כותרת בורדו */
   font-size: 25px;
   text-align: left;
 }
 
 /* Experience box */
 .experience-item {
-  background: white;
-  border: 2px solid #F1B4AA; 
-  border-radius: 16px;
-  box-shadow: 0 4px 14px rgba(217, 165, 179, 0.2);
+  background: #E9E2D0; /* רקע בז' לכרטיסיות */
+  border: 1px solid #A5A889; /* גבול ירוק עדין */
+  border-radius: 12px;
   padding: 25px;
-  margin-bottom: 10px; /* ריווח קצת קטן יותר בין תיבות */
-  transition: transform 0.2s ease;
+  margin-bottom: 20px; /* ריווח נקי בין פריטים */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .experience-item:hover {
   transform: translateY(-3px);
+  border-color: #4C0000; /* מסגרת הופכת לבורדו בהובר */
+  box-shadow: 0 6px 16px rgba(76, 0, 0, 0.1); /* צללית בורדו עדינה */
 }
 
 /* Header inside each experience box (logo + content) */
@@ -77,6 +83,10 @@ h1 {
   height: 80px;
   object-fit: contain;
   margin-bottom: 0;
+  /* אופציונלי: אם לוגו לבן נעלם על הבז', אפשר להוסיף רקע לבן קטן ללוגו */
+  /* background-color: white; */
+  /* border-radius: 8px; */
+  /* padding: 5px; */
 }
 
 /* Experience content */
@@ -87,23 +97,23 @@ h1 {
 /* Job title */
 .job-title {
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   margin-bottom: 4px;
-  color: #D98A9B;
+  color: #4C0000; /* בורדו - מדגיש את התפקיד */
 }
 
 /* Company name */
 .company {
   font-size: 1rem;
   font-weight: 600;
-  color: #555;
+  color: #2D2D2A; /* אפור כהה */
   margin-bottom: 4px;
 }
 
 /* Location & date */
 .location-date {
   font-size: 0.9rem;
-  color: #888;
+  color: #646138; /* ירוק זית - לפרטים משניים */
   font-style: italic;
   margin-bottom: 12px;
 }
@@ -113,24 +123,33 @@ ul.responsibilities {
   padding-left: 20px;
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #333;
+  color: #2D2D2A;
 }
 
 ul.responsibilities li {
   margin-bottom: 8px;
 }
 
-/* Optional: bold keywords */
-.job-title strong,
-.company strong,
-.location-date strong {
-  color: #2D2D2A;
-}
-
-/* Optional: tag for temporary positions */
+/* Tag for temporary positions */
 .temporary-tag {
   font-size: 0.85rem;
-  color: #999;
+  color: #646138;
   margin-left: 5px;
+  border: 1px solid #646138;
+  padding: 2px 6px;
+  border-radius: 4px;
 }
 
+/* Responsiveness */
+@media (max-width: 600px) {
+  .experience-header {
+    flex-direction: column-reverse; /* בנייד הלוגו יעלה למעלה */
+    align-items: flex-start;
+  }
+  
+  .company-logo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+}
