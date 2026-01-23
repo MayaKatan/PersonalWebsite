@@ -1,61 +1,57 @@
-/* הרקע הכללי של האתר*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 body {
   margin: 0;
-  font-family:'Inter', sans-serif;
-  background-color: #FAFAF6; /*צבע הרקע הכללי של האתר*/
-  color: #2D2D2A;
+  font-family: 'Inter', sans-serif;
+  background-color: #F4F0E7; /* רקע ראשי - קרם בהיר */
+  color: #2D2D2A; /* השארתי אפור כהה לטקסט הארוך כדי לשמור על קריאות מקסימלית */
   line-height: 1.6;
   font-size: 18px;
 }
 
-/* תבנית לעמוד המרכזי*/
 .container {
   width: 100%;
   max-width: 1000px;
   margin: auto;
   padding: 30px 20px;
+  box-sizing: border-box;
 }
 
-/* עיצוב הכותרות בעמוד הראשי*/
 h2 {
-  border-bottom: 2px solid #D9A5B3;
+  border-bottom: 2px solid #A5A889; /* קו תחתון בירוק מרווה */
   padding-bottom: 1px;
-  margin-top: 20px; 
-  color: #2D2D2A;
+  margin-top: 30px; 
+  color: #4C0000; /* כותרות בבורדו כהה - חזק ומרשים */
   font-size: 25px;
 }
 
-/* תמונת הפרופיל שלי*/
+/* תמונת הפרופיל */
 .profile-pic {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  filter: grayscale(20%) brightness(1.05);
-  border: 2px solid #F1B4AA;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  filter: grayscale(10%) brightness(1.05);
+  border: 3px solid #646138; /* מסגרת זית כהה */
+  box-shadow: 0 4px 12px rgba(76, 0, 0, 0.15); /* צללית אדמדמה עדינה */
 }
 
 .intro {
   display: flex;
   align-items: flex-start;
   gap: 40px;
-  flex-wrap: wrap;
   margin-top: 20px;
   margin-bottom: 20px;
 }
 
-/* טקסט ליד התמונה */
 .intro-text {
   flex: 1;
-  min-width: 300px;
+  font-family: sans-serif;
+  color: #444; /* טיפה כהה יותר לקריאות */
 }
 
-
-
-/***********************My Skills*******************/
+/* My Skills */
 .skills-container {
   display: flex;
   flex-wrap: wrap;
@@ -63,145 +59,118 @@ h2 {
   margin-top: 20px;
 }
 
-/* 🏷️ תגיות של מיומנויות (Skill Tags) */
 .skill {
-  background-color: #FAFAF6;
-  color: #2D2D2A;
-  padding: 8px 14px;
-  border-radius: 6px; /* פינות מעוגלות בעדינות */
-  border: 2px solid #F1B4AA;
-  font-size: 15px;
-  font-weight: 400;
-  transition: background-color 0.3s ease;
-}
-
-/***********************Education*******************/
-.course-tag {
-  display: inline-flex; /* חדש */
-  align-items: center;  /* ליישור אנכי נעים */
-  background-color: #FAFAF6;
-  color: #2D2D2A;
-  padding: 6px 12px;     /* פחות padding אנכי */
+  background-color: #E9E2D0; /* רקע בז' לכרטיסיות */
+  color: #4C0000; /* טקסט בורדו */
+  padding: 5px 12px; 
   border-radius: 6px;
-  border: 2px solid #F1B4AA;
-  font-size: 15px;
-  font-weight: 400;
-  transition: background-color 0.3s ease;
-  line-height: 1;        /* שורת טקסט צפופה יותר */
-  margin: 0;             /* מונע ריווח אנכי עודף */
+  border: 1px solid #A5A889; /* גבול ירוק מרווה עדין */
+  font-size: 14px; 
+  font-weight: 600; /* הדגשתי טיפה את הפונט שיהיה ברור */
+  transition: all 0.3s ease;
 }
 
-.courses-container {
-  margin-top: 10px;
-}
-
-.courses-title {
-  font-size: 18px;
-  color: #2D2D2A;
-  margin: 0 0 6px 0; /* פחות רווחים */
-  font-weight: 600;
-}
-
-.course-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
+/* Education */
 .education-details p {
-  margin: 0 0 4px 0; /* צמצום רווח בין השורות */
-}
-
-.contact li a {
-  display: inline-block;
-  padding: 10px 10px;
-  border: 2px solid #F1B4AA;
-  border-radius: 6px;
-  background-color: #FAFAF6;
-  color: #D9A5B3;
+  margin: 0 0 4px 0;
+  color: #646138; /* טקסט זית לפרטי השכלה */
   font-weight: 500;
-  font-size: 16px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.contact li a:hover {
-  background-color: #ebd3da; /* כמו explore */
-  color: #D9A5B3; /* לא שחור */
-  transform: translateY(-3px);
-}
-
-/* Courses Button – styled like explore-box */
-.courses-btn {
-  display: inline-block;
-  margin-top: 15px;
-  background-color: #FAFAF6;
-  border: 2px solid #F1B4AA;
-  border-radius: 10px;
-  color: #D9A5B3;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 10px 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease, background-color 0.3s ease;
-  font-size: 14px;
-  text-align: center;
-}
-
-.courses-btn:hover {
-  transform: translateY(-3px);
-  background-color: #ebd3da;
-}
-
-
-
-/***********************Explore More*******************/
+/* Explore More */
 .explore-container {
-  display: flex;
-  gap: 20px;
-  flex-wrap: nowrap; 
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
   margin-top: 20px;
-  justify-content: center;
-  padding-bottom: 10px;
 }
 
 .explore-box {
-  flex: 0 0 200px; 
-  height: 80px;
-  background-color: #FAFAF6;
-  border: 2px solid #F1B4AA;
-  border-radius: 10px;
+  height: 60px; 
+  background-color: #E9E2D0; /* רקע בז' */
+  border: 1px solid #A5A889;
+  border-radius: 8px; /* הקטנתי טיפה רדיוס למראה יותר "רבוע" ורציני */
   text-decoration: none;
-  color: #D9A5B3;
+  color: #4C0000; /* טקסט בורדו */
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, background-color 0.3s ease;
+  padding: 10px; 
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.2s ease;
 }
 
 .explore-box:hover {
-  transform: translateY(-5px);
-  background-color: #ebd3da;
+  transform: translateY(-3px);
+  background-color: #A5A889; /* הופך לבורדו במעבר */
+  color: #F4F0E7; /* טקסט הופך לבהיר */
+  border-color: #4C0000;
 }
 
 .explore-box h3 {
   margin: 0;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 15px; 
+  font-weight: 600;
   line-height: 1.3;
 }
 
-/***********************Contact*******************/
+/* Contact */
 .contact {
   list-style: none;
   padding: 0;
   display: flex;
-  gap: 20px;
+  gap: 15px;
   margin-top: 15px;
   flex-wrap: wrap;
-  justify-content: flex-start; 
 }
 
+.contact li a,
+.contact li button {
+  display: inline-block;
+  padding: 10px 18px;
+  border: 2px solid #646138; /* גבול זית כהה */
+  border-radius: 6px;
+  background-color: transparent;
+  color: #646138;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact li a:hover,
+.contact li button:hover {
+  background-color: #646138;
+  color: #F4F0E7;
+  transform: translateY(-3px);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .intro {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+  
+  .intro-text {
+    width: 100%;
+  }
+
+  /* 2 columns on mobile */
+  .explore-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .explore-container a:last-child {
+    grid-column: span 2;
+  }
+
+  .contact {
+    justify-content: center;
+  }
+}
